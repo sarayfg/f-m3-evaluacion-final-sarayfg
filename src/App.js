@@ -18,9 +18,15 @@ class App extends React.Component {
   }
 
   getData () {
-    fetchHarryPotter ().then (data => {
+    fetchHarryPotter ().then (data=> {
+      const info = data.map((item, ind) => {
+        return {
+          ...item,
+          id: ind + 1,
+        }
+      })
       this.setState({
-        data: data,
+        data: info
       })
     })
   }

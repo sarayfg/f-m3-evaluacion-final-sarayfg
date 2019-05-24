@@ -7,7 +7,7 @@ class CharacterList extends React.Component{
         return (
             <ul>
                 {harryData.map(item => (
-                    <li>
+                    <li key={item.id}>
                        <CharacterCard item={item}/>
                     </li>
                 ))}
