@@ -13,7 +13,7 @@ class Home extends React.Component {
           onChangeName={onChangeName}
           filterNameValue={filterNameValue}
         />
-        <CharacterList harryData={harryData} />
+        <CharacterList harryData={harryData} filterNameValue={filterNameValue} />
       </div>
     );
   }
