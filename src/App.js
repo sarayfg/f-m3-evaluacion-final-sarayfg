@@ -3,6 +3,7 @@ import './App.scss';
 import fetchHarryPotter from './services/ReasonsService';
 import CharacterDetails from './components/CharacterDetails';
 import Home from './components/Home';
+import {Route, Switch} from 'react-router-dom';
 
 class App extends React.Component {
   constructor (props) {
@@ -52,12 +53,36 @@ class App extends React.Component {
     const filterNameValue = this.state.filters.byName;
     return (
       <div>
-        <Home
+        <header>
+          <h1>Harry Potter Characters</h1>
+        </header>
+        <main>
+          <Switch>
+            <Route
+              exact
+              path="/"
+              render={routerProps => (
+                <Home
+                  harryData={data}
+                  onChangeName={this.handlerOnChangeName}
+                  filterNameValue={filterNameValue}
+                />
+              )}
+            />
+            <Route 
+              path="/characterdetails" 
+              render={routerProps => (
+                <CharacterDetails />
+              )}
+            />
+          </Switch>
+        </main>
+        {/* <Home
           harryData={data}
           onChangeName={this.handlerOnChangeName}
           filterNameValue={filterNameValue}
         />
-        <CharacterDetails />
+        <CharacterDetails /> */}
       </div>
     );
   }

@@ -19,8 +19,8 @@ class Filters extends React.Component {
 }
 
 Filters.propTypes = {
-    onChangeName: PropTypes.func.isRequired,
-    filterNameValue: PropTypes.string.isRequired,
-}
+  onChangeName: PropTypes.func.isRequired,
+  filterNameValue: PropTypes.string.isRequired,
+};
 
 export default Filters;
