@@ -1,12 +1,15 @@
 import React from 'react';
 import CharacterCard from '../CharacterCard/CharacterCard';
+import PropTypes from 'prop-types';
+
 class CharacterList extends React.Component{
     render() {
         const {harryData, filterNameValue} =this.props;
         console.log(harryData);
         return (
             <ul>
-                {harryData.filter(item => item.name.includes(filterNameValue))
+                {harryData.filter(item => item.name.includes
+                (filterNameValue))
                 .map(item => (
                     <li key={item.id}>
                        <CharacterCard item={item}/>
@@ -15,6 +18,11 @@ class CharacterList extends React.Component{
             </ul>
         )
     }
+}
+
+CharacterList.propTypes = {
+    harryData: PropTypes.array.isRequired,
+    filterNameValue: PropTypes.string.isRequired,
 }
 
 export default CharacterList;

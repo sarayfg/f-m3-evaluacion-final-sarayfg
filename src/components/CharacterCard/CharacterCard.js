@@ -1,4 +1,5 @@
 import React, {Fragment} from 'react';
+import PropTypes from 'prop-types';
 
 class CharacterCard extends React.Component {
     render(){
@@ -13,4 +14,7 @@ class CharacterCard extends React.Component {
     }
 }
 
+CharacterCard.propTypes = {
+    item: PropTypes.object.isRequired,
+}
 export default CharacterCard;
