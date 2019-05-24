@@ -16,12 +16,17 @@ class App extends React.Component {
     };
     this.getData = this.getData.bind (this);
     this.handlerOnChangeName = this.handlerOnChangeName.bind (this);
+    this.getCharacterDetails=this.getCharacterDetails.bind(this);
   }
 
   componentDidMount () {
     this.getData ();
   }
-
+  getCharacterDetails(id){
+    const characterId= this.state.data.map(item => item.id);
+    console.log(characterId);
+    return characterId.find(item => characterId === parseInt(id))
+  }
   getData () {
     fetchHarryPotter ().then (data => {
       const info = data.map ((item, ind) => {
@@ -47,7 +52,7 @@ class App extends React.Component {
       };
     });
   }
-
+ 
   render () {
     const {data} = this.state;
     const filterNameValue = this.state.filters.byName;
@@ -63,6 +68,7 @@ class App extends React.Component {
               path="/"
               render={routerProps => (
                 <Home
+                  match={routerProps.match}
                   harryData={data}
                   onChangeName={this.handlerOnChangeName}
                   filterNameValue={filterNameValue}
@@ -70,19 +76,17 @@ class App extends React.Component {
               )}
             />
             <Route 
-              path="/characterdetails" 
+              path="/characterdetails/:id" 
               render={routerProps => (
-                <CharacterDetails />
-              )}
+                <CharacterDetails 
+                data={this.getCharacterDetails (routerProps.match.params.id)}
+                />
+              )
+
+              }
             />
           </Switch>
         </main>
-        {/* <Home
-          harryData={data}
-          onChangeName={this.handlerOnChangeName}
-          filterNameValue={filterNameValue}
-        />
-        <CharacterDetails /> */}
       </div>
     );
   }

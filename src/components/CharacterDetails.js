@@ -1,8 +1,11 @@
-import React from 'react';
+import React, {Fragment} from 'react';
+import {Link} from 'react-router-dom';
 
 class CharacterDetails extends React.Component {
     render(){
-        return 'soy details'
+        return (
+            <p>HOLA</p>
+        )
     }
 }
 

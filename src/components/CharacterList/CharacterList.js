@@ -1,6 +1,7 @@
 import React from 'react';
 import CharacterCard from '../CharacterCard/CharacterCard';
 import PropTypes from 'prop-types';
+import {Link} from 'react-router-dom';
 
 class CharacterList extends React.Component {
   render () {
