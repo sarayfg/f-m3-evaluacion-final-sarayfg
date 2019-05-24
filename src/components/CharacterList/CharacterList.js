@@ -1,5 +1,5 @@
 import React from 'react';
-
+import CharacterCard from '../CharacterCard/CharacterCard';
 class CharacterList extends React.Component{
     render() {
         const harryData =this.props.harryData;
@@ -7,7 +7,9 @@ class CharacterList extends React.Component{
         return (
             <ul>
                 {harryData.map(item => (
-                    <li>{item.name}</li>
+                    <li>
+                       <CharacterCard item={item}/>
+                    </li>
                 ))}
             </ul>
         )
