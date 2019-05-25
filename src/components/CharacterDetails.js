@@ -13,6 +13,8 @@ class CharacterDetails extends React.Component {
                     <img src={data.image}></img>
                     <p>{data.house}</p>
                     <p>{data.yearOfBirth}</p>
+                    <p>{data.patronus}</p>
+                    <p>{data.alive? 'alive' : 'dead'}</p>
                 </div>
             </Fragment>
         )
