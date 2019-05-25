@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.scss';
 import fetchHarryPotter from './services/ReasonsService';
-import CharacterDetails from './components/CharacterDetails';
+import CharacterDetails from './components/CharacterDetails/CharacterDetails';
 import Home from './components/Home';
 import {Route, Switch} from 'react-router-dom';
 

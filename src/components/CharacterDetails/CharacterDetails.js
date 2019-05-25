@@ -14,7 +14,7 @@ class CharacterDetails extends React.Component {
                     <p>{data.house}</p>
                     <p>{data.yearOfBirth}</p>
                     <p>{data.patronus}</p>
-                    <p>{data.alive? 'alive' : 'dead'}</p>
+                    <p>{data.alive? 'alive' : <i class="fas fa-skull-crossbones"></i>}</p>
                 </div>
             </Fragment>
         )
