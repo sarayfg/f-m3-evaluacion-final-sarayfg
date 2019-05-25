@@ -3,8 +3,18 @@ import {Link} from 'react-router-dom';
 
 class CharacterDetails extends React.Component {
     render(){
+        const {data} = this.props;
+       
         return (
-            <p>HOLA</p>
+            <Fragment>
+                <Link to="/">See all character</Link>
+                <div>
+                    <h2>{data.name}</h2>
+                    <img src={data.image}></img>
+                    <p>{data.house}</p>
+                    <p>{data.yearOfBirth}</p>
+                </div>
+            </Fragment>
         )
     }
 }

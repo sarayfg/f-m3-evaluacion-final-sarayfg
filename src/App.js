@@ -23,9 +23,9 @@ class App extends React.Component {
     this.getData ();
   }
   getCharacterDetails(id){
-    const characterId= this.state.data.map(item => item.id);
-    console.log(characterId);
-    return characterId.find(item => characterId === parseInt(id))
+    const character= this.state.data;
+    console.log(character);
+    return character.find(item => item.id === parseInt(id))
   }
   getData () {
     fetchHarryPotter ().then (data => {
@@ -79,7 +79,7 @@ class App extends React.Component {
               path="/characterdetails/:id" 
               render={routerProps => (
                 <CharacterDetails 
-                data={this.getCharacterDetails (routerProps.match.params.id)}
+                data={this.getCharacterDetails(routerProps.match.params.id)}
                 />
               )
 
