@@ -11,7 +11,7 @@ class CharacterDetails extends React.Component {
         <div>
           <h2>{data.name}</h2>
           <img src={data.image} />
-          <img src={chooseImg(data)} />
+          <img src={chooseImg (data)} />
           <p>{data.yearOfBirth}</p>
           <p>{data.patronus}</p>
           <p>{data.alive ? 'alive' : <i class="fas fa-skull-crossbones" />}</p>
