@@ -4,6 +4,10 @@ import fetchHarryPotter from './services/ReasonsService';
 import CharacterDetails from './components/CharacterDetails/CharacterDetails';
 import Home from './components/Home';
 import {Route, Switch} from 'react-router-dom';
+import gryffindor from './images/gryffindor.jpg';
+import Hufflepuff from './images/Hufflepuff.jpeg';
+import Ravenclaw from './images/Ravenclaw.jpeg';
+import Slytherin from './images/Slytherin.jpeg';
 
 class App extends React.Component {
   constructor (props) {
@@ -17,6 +21,7 @@ class App extends React.Component {
     this.getData = this.getData.bind (this);
     this.handlerOnChangeName = this.handlerOnChangeName.bind (this);
     this.getCharacterDetails=this.getCharacterDetails.bind(this);
+    this.chooseImg= this.chooseImg.bind(this);
   }
 
   componentDidMount () {
@@ -52,6 +57,15 @@ class App extends React.Component {
       };
     });
   }
+  chooseImg(item){
+    if(item.house=== 'Gryffindor'){
+        return gryffindor
+    } else if(item.house ===  "Slytherin"){
+        return Slytherin
+    } else if(item.house === "Hufflepuff") {
+        return Hufflepuff
+    } else {return Ravenclaw}
+}
  
   render () {
     const {data} = this.state;
@@ -59,7 +73,7 @@ class App extends React.Component {
     return (
       <div>
         <header>
-          <h1>Harry Potter Characters</h1>
+          <h1 className="main-title">Harry Potter Characters</h1>
         </header>
         <main>
           <Switch>
@@ -72,6 +86,7 @@ class App extends React.Component {
                   harryData={data}
                   onChangeName={this.handlerOnChangeName}
                   filterNameValue={filterNameValue}
+                  chooseImg={this.chooseImg}
                 />
               )}
             />
@@ -80,6 +95,7 @@ class App extends React.Component {
               render={routerProps => (
                 <CharacterDetails 
                 data={this.getCharacterDetails(routerProps.match.params.id)}
+                chooseImg={this.chooseImg}
                 />
               )
 

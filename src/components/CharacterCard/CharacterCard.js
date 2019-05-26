@@ -1,31 +1,21 @@
 import React, {Fragment} from 'react';
 import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
-import gryffindor from '../../images/gryffindor.jpg';
-import Hufflepuff from '../../images/Hufflepuff.jpeg';
-import Ravenclaw from '../../images/Ravenclaw.jpeg';
-import Slytherin from '../../images/Slytherin.jpeg';
+import './CharacterCard.scss'
+
 
 class CharacterCard extends React.Component {
 
-    chooseImg(item){
-        if(item.house=== 'Gryffindor'){
-            return gryffindor
-        } else if(item.house ===  "Slytherin"){
-            return Slytherin
-        } else if(item.house === "Hufflepuff") {
-            return Hufflepuff
-        } else {return Ravenclaw}
-    }
+  
     render(){
-        const {item}= this.props;
+        const {item, chooseImg}= this.props;
         return (
             <Fragment>
+            <Link to={`/characterdetails/${item.id}`} className="character-link">
+            <img src={item.image} className="character-img"></img>
             <h2>{item.name}</h2>
-            <img src={item.image}></img>
-            <img src={this.chooseImg(item)}></img>
-           
-            <Link to={`/characterdetails/${item.id}`}>See more information</Link>
+            <img src={chooseImg(item)} className="house-img"></img>
+            </Link>
             </Fragment>
         )
     } 

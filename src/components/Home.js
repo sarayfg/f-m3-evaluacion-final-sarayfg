@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 class Home extends React.Component {
   render () {
-    const {harryData, onChangeName, filterNameValue} = this.props;
+    const {harryData, onChangeName, filterNameValue, chooseImg} = this.props;
     return (
       <div>
         <Filters
@@ -15,6 +15,7 @@ class Home extends React.Component {
         <CharacterList
           harryData={harryData}
           filterNameValue={filterNameValue}
+          chooseImg={chooseImg}
         />
       </div>
     );
