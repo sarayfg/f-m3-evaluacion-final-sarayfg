@@ -9,7 +9,9 @@ class CharacterDetails extends React.Component {
     return (
       <div className="details-page">
         {loading
-          ? 'Cargando página...'
+          ? <div className="fa-3x">
+              <i class="fas fa-spinner fa-spin" />
+            </div>
           : <Fragment>
               <Link to="/" className="back-link">See all character</Link>
               <div className="detail-card__container">

@@ -1,23 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "05f1ac7a5a1432dbc4a1206c211bf624",
+    "revision": "7745ac8ffb12a06b44dc314d836b944e",
     "url": "./index.html"
   },
   {
-    "revision": "ffb6c2c79d47d7819d72",
-    "url": "./static/css/main.8e4e53dc.chunk.css"
+    "revision": "3ebd6b8993ab578b8df5",
+    "url": "./static/css/main.63594dea.chunk.css"
   },
   {
-    "revision": "da691bbd755ca530c694",
-    "url": "./static/js/2.6c4fe686.chunk.js"
+    "revision": "1639e72709e298579f45",
+    "url": "./static/js/2.a20de225.chunk.js"
   },
   {
-    "revision": "ffb6c2c79d47d7819d72",
-    "url": "./static/js/main.3e152e44.chunk.js"
+    "revision": "3ebd6b8993ab578b8df5",
+    "url": "./static/js/main.bbae3518.chunk.js"
   },
   {
     "revision": "8c97409f0ee389fe75da",
     "url": "./static/js/runtime~main.d653cc00.js"
+  },
+  {
+    "revision": "1f5f57a1d63ee46145c69abe59e7500a",
+    "url": "./static/media/Harry_Potter_Castles_Fantastic_world_Hogwarts_516177_1280x764.1f5f57a1.jpg"
   },
   {
     "revision": "56d68e7b024289c6c0194475e46dccb9",
@@ -34,5 +38,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "4553730043301333e701d58b4ec85e1e",
     "url": "./static/media/gryffindor.45537300.jpg"
+  },
+  {
+    "revision": "b6fc9cc854af4f9cebcfb806491d674a",
+    "url": "./static/media/tittle.b6fc9cc8.png"
   }
 ]);

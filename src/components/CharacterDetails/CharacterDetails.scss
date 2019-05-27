@@ -1,6 +1,9 @@
 .back-link {
   text-decoration: none;
   margin-bottom: 30px;
+  color: rgb(250, 243, 229);
+  font-size: 26px;
+  margin-left: 30px;
 }
 .detail-card__container {
   display: flex;
@@ -9,26 +12,30 @@
   align-items: center;
   height: 300px;
   width: 500px;
+  background-color: rgb(250, 243, 229);
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgb(21, 22, 31);
   margin: auto;
-  background-color: rgb(212, 131, 54);
-  border: 1px solid black;
 }
 
 .character-img {
   width: 200px;
 }
 .details-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  min-height: 100vh;
 }
 
 .info-container {
   width: 300px;
-  color: white;
+  color: rgb(100, 77, 34);
   padding-left: 15px;
 }
 
 .character-name {
+  text-align: center;
+}
+.fa-spinner {
+  color: white;
+  width: 100%;
   text-align: center;
 }

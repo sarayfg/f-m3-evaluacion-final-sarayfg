@@ -9,9 +9,17 @@ class CharacterCard extends React.Component {
     return (
       <Fragment>
         <Link to={`/characterdetails/${item.id}`} className="character-link">
-          <img src={item.image} className="character-img" alt={`imagen de ${item.name}`}/>
+          <img
+            src={item.image}
+            className="character-img"
+            alt={`imagen de ${item.name}`}
+          />
           <h2>{item.name}</h2>
-          <img src={chooseImg (item)} className="house-img" alt={`imagen de ${item.house}`}/>
+          <img
+            src={chooseImg (item)}
+            className="house-img"
+            alt={`imagen de ${item.house}`}
+          />
         </Link>
       </Fragment>
     );

@@ -8,6 +8,7 @@ import gryffindor from './images/gryffindor.jpg';
 import Hufflepuff from './images/Hufflepuff.jpeg';
 import Ravenclaw from './images/Ravenclaw.jpeg';
 import Slytherin from './images/Slytherin.jpeg';
+import tittle from './images/tittle.png';
 
 class App extends React.Component {
   constructor (props) {
@@ -21,17 +22,17 @@ class App extends React.Component {
     };
     this.getData = this.getData.bind (this);
     this.handlerOnChangeName = this.handlerOnChangeName.bind (this);
-    this.getCharacterDetails=this.getCharacterDetails.bind(this);
-    this.chooseImg= this.chooseImg.bind(this);
+    this.getCharacterDetails = this.getCharacterDetails.bind (this);
+    this.chooseImg = this.chooseImg.bind (this);
   }
 
   componentDidMount () {
     this.getData ();
   }
-  getCharacterDetails(id){
-    const character= this.state.data;
-    console.log(character);
-    return character.find(item => item.id === parseInt(id))
+  getCharacterDetails (id) {
+    const character = this.state.data;
+    console.log (character);
+    return character.find (item => item.id === parseInt (id));
   }
   getData () {
     fetchHarryPotter ().then (data => {
@@ -59,23 +60,27 @@ class App extends React.Component {
       };
     });
   }
-  chooseImg(item){
-    if(item.house=== 'Gryffindor'){
-        return gryffindor
-    } else if(item.house ===  "Slytherin"){
-        return Slytherin
-    } else if(item.house === "Hufflepuff") {
-        return Hufflepuff
-    } else {return Ravenclaw}
-}
- 
+  chooseImg (item) {
+    if (item.house === 'Gryffindor') {
+      return gryffindor;
+    } else if (item.house === 'Slytherin') {
+      return Slytherin;
+    } else if (item.house === 'Hufflepuff') {
+      return Hufflepuff;
+    } else {
+      return Ravenclaw;
+    }
+  }
+
   render () {
     const {data, loading} = this.state;
     const filterNameValue = this.state.filters.byName;
     return (
-      <div>
+      <div className="main-container">
         <header>
-          <h1 className="main-title">Harry Potter Characters</h1>
+          <h1 className="main-title">
+            <img src={tittle} alt="Harry Potter" className="title-img" />
+          </h1>
         </header>
         <main>
           <Switch>
@@ -92,17 +97,15 @@ class App extends React.Component {
                 />
               )}
             />
-            <Route 
-              path="/characterdetails/:id" 
+            <Route
+              path="/characterdetails/:id"
               render={routerProps => (
-                <CharacterDetails 
-                data={this.getCharacterDetails(routerProps.match.params.id)}
-                chooseImg={this.chooseImg}
-                loading={loading}
+                <CharacterDetails
+                  data={this.getCharacterDetails (routerProps.match.params.id)}
+                  chooseImg={this.chooseImg}
+                  loading={loading}
                 />
-              )
-
-              }
+              )}
             />
           </Switch>
         </main>
