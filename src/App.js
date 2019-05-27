@@ -8,6 +8,7 @@ import gryffindor from './images/gryffindor.jpg';
 import Hufflepuff from './images/Hufflepuff.jpeg';
 import Ravenclaw from './images/Ravenclaw.jpeg';
 import Slytherin from './images/Slytherin.jpeg';
+import hogwarts from './images/hogwarts.jpeg';
 import tittle from './images/tittle.png';
 
 class App extends React.Component {
@@ -67,9 +68,9 @@ class App extends React.Component {
       return Slytherin;
     } else if (item.house === 'Hufflepuff') {
       return Hufflepuff;
-    } else {
+    } else if (item.house === 'Ravenclaw') {
       return Ravenclaw;
-    }
+    } else { return hogwarts}
   }
 
   render () {

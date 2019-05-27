@@ -2,15 +2,19 @@
   height: 50px;
   width: 40px;
 }
+
 .character-img {
-  width: 200px;
+  width: 100%;
   height: 300px;
+  object-fit: cover;
+  object-position: top;
 }
+
 .character-link {
   height: 500px;
   width: 200px;
   text-decoration: none;
-   color:  rgb(100, 77, 34);
+  color: rgb(100, 77, 34);
   display: flex;
   flex-direction: column;
   justify-content: space-between;

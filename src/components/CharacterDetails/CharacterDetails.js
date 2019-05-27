@@ -18,7 +18,7 @@ class CharacterDetails extends React.Component {
                 <img
                   src={data.image}
                   alt={`imagen de ${data.name}`}
-                  className="character-img"
+                  className="character-detail__img"
                 />
                 <div className="info-container">
                   <h2 className="character-name">{data.name}</h2>

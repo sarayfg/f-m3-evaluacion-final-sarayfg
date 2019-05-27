@@ -18,8 +18,11 @@
   margin: auto;
 }
 
-.character-img {
-  width: 200px;
+.character-detail__img {
+  width: 50%;
+  height: 300px;
+  object-fit: cover;
+  object-position: top;
 }
 .details-page {
   min-height: 100vh;
