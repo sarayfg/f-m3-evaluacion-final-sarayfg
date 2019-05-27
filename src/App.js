@@ -14,6 +14,7 @@ class App extends React.Component {
     super (props);
     this.state = {
       data: [],
+      loading: true,
       filters: {
         byName: '',
       },
@@ -42,6 +43,7 @@ class App extends React.Component {
       });
       this.setState ({
         data: info,
+        loading: false,
       });
     });
   }
@@ -68,7 +70,7 @@ class App extends React.Component {
 }
  
   render () {
-    const {data} = this.state;
+    const {data, loading} = this.state;
     const filterNameValue = this.state.filters.byName;
     return (
       <div>
@@ -96,6 +98,7 @@ class App extends React.Component {
                 <CharacterDetails 
                 data={this.getCharacterDetails(routerProps.match.params.id)}
                 chooseImg={this.chooseImg}
+                loading={loading}
                 />
               )
 
