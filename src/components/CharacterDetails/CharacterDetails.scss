@@ -1,0 +1,34 @@
+.back-link {
+  text-decoration: none;
+  margin-bottom: 30px;
+}
+.detail-card__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 300px;
+  width: 500px;
+  margin: auto;
+  background-color: rgb(212, 131, 54);
+  border: 1px solid black;
+}
+
+.character-img {
+  width: 200px;
+}
+.details-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info-container {
+  width: 300px;
+  color: white;
+  padding-left: 15px;
+}
+
+.character-name {
+  text-align: center;
+}

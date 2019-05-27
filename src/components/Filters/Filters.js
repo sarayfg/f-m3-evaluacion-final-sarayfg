@@ -1,14 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './Filters.scss';
 
 class Filters extends React.Component {
   render () {
     const {onChangeName, filterNameValue} = this.props;
     return (
-      <form>
-        <label htmlFor="character-name">Nombre del personaje</label>
+      <form className="filter-form">
+        <label htmlFor="character-name" className="filter-name__label">
+          Nombre del personaje
+        </label>
         <input
           type="text"
+          className="filter-name__input"
           id="character-name"
           value={filterNameValue}
           onChange={onChangeName}
