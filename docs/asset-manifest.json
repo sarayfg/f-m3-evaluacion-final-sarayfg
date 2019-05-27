@@ -1,21 +1,22 @@
 {
   "files": {
-    "main.css": "./static/css/main.63594dea.chunk.css",
-    "main.js": "./static/js/main.bbae3518.chunk.js",
-    "main.js.map": "./static/js/main.bbae3518.chunk.js.map",
+    "main.css": "./static/css/main.0c0e77b7.chunk.css",
+    "main.js": "./static/js/main.a4f6fb79.chunk.js",
+    "main.js.map": "./static/js/main.a4f6fb79.chunk.js.map",
     "runtime~main.js": "./static/js/runtime~main.d653cc00.js",
     "runtime~main.js.map": "./static/js/runtime~main.d653cc00.js.map",
-    "static/js/2.a20de225.chunk.js": "./static/js/2.a20de225.chunk.js",
-    "static/js/2.a20de225.chunk.js.map": "./static/js/2.a20de225.chunk.js.map",
+    "static/js/2.ca7e42f8.chunk.js": "./static/js/2.ca7e42f8.chunk.js",
+    "static/js/2.ca7e42f8.chunk.js.map": "./static/js/2.ca7e42f8.chunk.js.map",
     "index.html": "./index.html",
-    "precache-manifest.efbb9e0db1ba6ecd27a78c9956cc17f8.js": "./precache-manifest.efbb9e0db1ba6ecd27a78c9956cc17f8.js",
+    "precache-manifest.aae59134970f2600a93aec43d52522e7.js": "./precache-manifest.aae59134970f2600a93aec43d52522e7.js",
     "service-worker.js": "./service-worker.js",
-    "static/css/main.63594dea.chunk.css.map": "./static/css/main.63594dea.chunk.css.map",
-    "static/media/App.scss": "./static/media/Harry_Potter_Castles_Fantastic_world_Hogwarts_516177_1280x764.1f5f57a1.jpg",
+    "static/css/main.0c0e77b7.chunk.css.map": "./static/css/main.0c0e77b7.chunk.css.map",
     "static/media/Hufflepuff.jpeg": "./static/media/Hufflepuff.56d68e7b.jpeg",
     "static/media/Ravenclaw.jpeg": "./static/media/Ravenclaw.3bd6b8af.jpeg",
     "static/media/Slytherin.jpeg": "./static/media/Slytherin.890b6316.jpeg",
+    "static/media/App.scss": "./static/media/bgc2.c4a38d82.jpg",
     "static/media/gryffindor.jpg": "./static/media/gryffindor.45537300.jpg",
+    "static/media/hogwarts.jpeg": "./static/media/hogwarts.fa7165f5.jpeg",
     "static/media/tittle.png": "./static/media/tittle.b6fc9cc8.png"
   }
 }
